@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { PRODUCTS } from "../../products";
 import { ShopContext } from "../../context/shopContext";
 import { CartItem } from "./cartItem";
@@ -11,15 +11,17 @@ export const Cart = () => {
 
   const navigate = useNavigate();
 
+  console.log(cartItems);
+
   return (
     <div className="cart">
       <div>
         <h1> Your Cart Items</h1>
       </div>
       <div className="cartItem">
-        {PRODUCTS.map((product) => {
+        {PRODUCTS.map((product, index) => {
           if (cartItems[product.id] !== 0) {
-            return <CartItem data={product} />;
+            return <CartItem key={index} data={product} />;
           }
         })}
         {totalAmount > 0 ? (

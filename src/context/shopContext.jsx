@@ -1,4 +1,7 @@
-import React, { createContext, useState } from "react";
+/* eslint-disable react/prop-types */
+
+import { createContext, useState } from "react";
+import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
 
@@ -10,7 +13,7 @@ const getDefaultCart = () => {
   return cart;
 };
 
-export const ShopContextProvider = () => {
+export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   const getTotalCartAmount = () => {
@@ -25,7 +28,9 @@ export const ShopContextProvider = () => {
   };
 
   const addToCart = (itemId) => {
+    console.log("calling");
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+
   };
 
   const removeFromCart = (itemId) => {
@@ -36,7 +41,7 @@ export const ShopContextProvider = () => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
 
-  const contextValue = { cartItems, addToCart, removeFromCart };
+  const contextValue = { cartItems, addToCart, removeFromCart, getTotalCartAmount, updateCartItemCount };
 
   return (
     <ShopContext.Provider value={contextValue}>
