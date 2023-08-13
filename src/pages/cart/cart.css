@@ -11,29 +11,37 @@
     display: flex;
   
     align-items: center;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
+    /* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); */
+    /* border-radius: 25px; */
     margin: 30px;
   }
   
   .cartItem img {
-    width: 200px;
+    width: 100px;
   }
   
   .cartItem .description {
-    width: 100%;
-    font-size: 30px;
+    width: 80%;
+    font-size: 25px;
   }
   
   .countHandler input {
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    /* font-weight: bolder; */
+  }
+
+  .countHandler button {
     width: 40px;
+    height: 10px;
     text-align: center;
     font-weight: bolder;
   }
   
   .checkout button {
     width: 150px;
-    height: 50px;
+    height: 55px;
     background-color: rgb(19, 19, 19);
     color: white;
     border: none;

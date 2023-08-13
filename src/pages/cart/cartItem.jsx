@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
-
+// import '../../components./navBar.css'
 import { useContext } from "react";
-import { ShopContext } from "../../context/shopContext";
+import { ShopContext } from "../../context/shopContext"; 
+import './cart.css';
 
 export const CartItem = (props) => {
   const { id, productName, price, productImage } = props.data;
@@ -14,8 +15,8 @@ export const CartItem = (props) => {
         <p>
           <b> {productName} </b>
         </p>
-        <p> ${price} </p>
-        <div className="countHandler">
+        <p> ${price} </p> <br />
+        <div className="countHandler"> 
           <button onClick={() => removeFromCart(id)}> - </button>
           <input
             value={cartItems[id]}

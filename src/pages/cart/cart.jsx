@@ -16,7 +16,7 @@ export const Cart = () => {
   return (
     <div className="cart">
       <div>
-        <h1> Your Cart Items</h1>
+        <h3> Your Cart Items</h3>
       </div>
       <div className="cartItem">
         {PRODUCTS.map((product, index) => {
