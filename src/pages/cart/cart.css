@@ -1,6 +1,6 @@
 .cart {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -29,6 +29,7 @@
     width: 10px;
     height: 10px;
     text-align: center;
+    
     /* font-weight: bolder; */
   }
 
@@ -37,11 +38,14 @@
     height: 10px;
     text-align: center;
     font-weight: bolder;
+    justify-content: end;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
   
   .checkout button {
     width: 150px;
-    height: 55px;
+    height: 100px;
     background-color: rgb(19, 19, 19);
     color: white;
     border: none;
